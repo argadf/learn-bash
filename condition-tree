@@ -1,0 +1,16 @@
+#!/bin/bash
+
+PAKET=tree
+if [ -v tree ]
+then
+        echo "$PAKET sudah terinstall"
+else
+        read -p  "$PAKET belum terinstall. Install $PAKET ?[y/Any other key]" c$
+        if [[ $choice == "y" || $choice == "yes" ]]
+        then
+        apt install tree -y
+        echo "$PAKET sudah terinstall"
+        else
+        echo "Instal $PAKET dibatalkan"
+        fi
+fi
