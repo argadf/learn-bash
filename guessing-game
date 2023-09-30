@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Permainan tebak angka"
+
+angka=$(shuf -i 1-10 -n 1)
+
+while true
+do
+        read -p "Sebutkan angka antara 1-10 : " tebak
+        if [ $angka -eq $tebak ]
+        then
+                echo "betul"
+        break
+        else
+                echo "salah, tebak lagi"
+        fi
+done
