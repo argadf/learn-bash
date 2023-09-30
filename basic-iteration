@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for dirarga in {1..50}
+do
+        mkdir dir$dirarga
+for filearga in {1..50}
+do
+        touch dir$dirarga/file$filearga.txt
+        echo "Halo saya adalah file ke $filearga" >> dir$dirarga/file$filearga.txt
+        echo "Saya dibuat pada : $(date)" >> dir$dirarga/file$filearga.txt
+done
+done
